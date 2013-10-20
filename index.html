@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gian Marco Gherardi personal homepage">
+	<meta name="author" content="Gian Marco Gherardi">
+	<meta name="keywords" content="gian marco gherardi homepage">
 
-    <title>Gian Marco Gherardi</title>
+	<title>Gian Marco Gherardi</title>
 
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="index.css">
-  </head>
+	<link rel="openid.server" href="http://www.myopenid.com/server">
+	<link rel="openid.delegate" href="http://gianmarco.gherardi.myopenid.com/">
 
-  <body>
-    <div class="container">
-      <div class="page-header">
-        <h1>Gian Marco Gherardi <small>perfectionist with deadlines</small></h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <address>
-            <strong>E-Mail</strong><br>
-            <a id="email" href="#"></a>
-          </address>
-          <address>
-            <strong>Mobile</strong><br>
-            <a id="mobile" href="#"></a>
-          </address>
-          <address>
-            <strong>Skype</strong><br>
-            <a href="callto:gianmarco.gherardi">gianmarco.gherardi</a>
-          </address>
-        </div>
-        <div class="col-sm-6">
-          <address>
-            <strong>Twitter</strong><br>
-            <a href="http://www.twitter.com/gianmarcog">gianmarcog</a>
-          </address>
-          <address>
-            <strong>LinkedIn</strong><br>
-            <a href="http://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
-          </address>
-          <address>
-            <strong>GitHub</strong><br>
-            <a href="https://github.com/gimmi">gimmi</a>
-          </address>
-        </div>
-      </div>
-    </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            var email = [
-                ['gianmarco', 'gherardi'].join('.'),
-                ['gmail', 'com'].join('.')
-            ].join('@');
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
 
-            $('#email').attr('href', 'mailto:' + email).text(email);
+<body>
+	<div class="container">
+	  <div class="page-header">
+		<h1>Gian Marco Gherardi <small>perfectionist with deadlines</small></h1>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-6">
+		  <address>
+			<strong>E-Mail</strong><br>
+			<a id="email" href="#"></a>
+		  </address>
+		  <address>
+			<strong>Mobile</strong><br>
+			<a id="mobile" href="#"></a>
+		  </address>
+		  <address>
+			<strong>Skype</strong><br>
+			<a href="callto:gianmarco.gherardi">gianmarco.gherardi</a>
+		  </address>
+		</div>
+		<div class="col-sm-6">
+		  <address>
+			<strong>Twitter</strong><br>
+			<a href="http://www.twitter.com/gianmarcog">gianmarcog</a>
+		  </address>
+		  <address>
+			<strong>LinkedIn</strong><br>
+			<a href="http://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
+		  </address>
+		  <address>
+			<strong>GitHub</strong><br>
+			<a href="https://github.com/gimmi">gimmi</a>
+		  </address>
+		</div>
+	  </div>
+	</div>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			var email = [
+				['gianmarco', 'gherardi'].join('.'),
+				['gmail', 'com'].join('.')
+			].join('@');
 
-            var mobile = [
-              ['+', 3, 9].join(''), 
-              [3, 2, 8].join(''), 
-              [0, 1, 7, 4, 1, 3, 7].join('')
-            ].join(' ');
+			$('#email').attr('href', 'mailto:' + email).text(email);
 
-            $('#mobile').attr('href', 'tel:' + mobile).text(mobile);
-        });
-    </script>
-    <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-        try {
-            var pageTracker = _gat._getTracker("UA-20776148-1");
-            pageTracker._trackPageview();
-        } catch (err) {
-        }
-    </script>
+			var mobile = [
+			  ['+', 3, 9].join(''), 
+			  [3, 2, 8].join(''), 
+			  [0, 1, 7, 4, 1, 3, 7].join('')
+			].join(' ');
+
+			$('#mobile').attr('href', 'tel:' + mobile).text(mobile);
+		});
+	</script>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-20776148-1");
+			pageTracker._trackPageview();
+		} catch (err) {
+		}
+	</script>
   </body>
 </html>
