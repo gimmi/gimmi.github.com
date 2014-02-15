@@ -40,6 +40,10 @@
 			<strong>VAT</strong><br>
 			<a href="#">IT03407110364</a>
 		  </address>
+		  <address>
+			<strong>PEC</strong><br>
+			<a id="pec" href="#"></a>
+		  </address>
 		</div>
 		<div class="col-sm-6">
 		  <address>
@@ -75,6 +79,13 @@
 			].join(' ');
 
 			$('#mobile').attr('href', 'tel:' + mobile).text(mobile);
+
+			var pec = [
+				['gianmarco', 'gherardi'].join('.'),
+				['pec', 'it'].join('.')
+			].join('@');
+
+			$('#pec').attr('href', 'mailto:' + pec).text(pec);
 		});
 	</script>
 	<script type="text/javascript">
