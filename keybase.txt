@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/gimmi
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://gianmarco.gherardi.me
+  * I am gimmi (https://keybase.io/gimmi) on keybase.
+  * I have a public key with fingerprint 48FA AC9B F061 21B9 2C1B  3885 9811 334F 30C7 55C3
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01012f86070414a3f567bf019b297b755b5ee9b6b67a6778d4ba76b254ba8d2c9a2d0a",
+            "fingerprint": "48faac9bf06121b92c1b38859811334f30c755c3",
+            "host": "keybase.io",
+            "key_id": "9811334f30c755c3",
+            "kid": "01012f86070414a3f567bf019b297b755b5ee9b6b67a6778d4ba76b254ba8d2c9a2d0a",
+            "uid": "d8e5fc79bb256732016897056b2cd119",
+            "username": "gimmi"
+        },
+        "service": {
+            "hostname": "gianmarco.gherardi.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1483456666,
+    "expire_in": 157680000,
+    "prev": "5aab63f6d237dae2f182d735662b25175b3f71cba27dcd9784cdd3b75fa074be",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.61
+Comment: https://keybase.io/crypto
+
+yMIqAnicrZJbSFRBGMd3vay1UQYhSWXQmFC06Zlzm3O2CIIoqIcosdKSbebMnN2j
+7p7t7NESs+heD4FFkGkXogsi6IsFBVEaS1cqw8DIikqSLkoRIUYFzZHqqcfmZZhv
+/v/f/L+PSU/O9AX9Fe60kQ2FA9n++z0na30bqrtbGgCxaT0IN4BqNr6xGspSbqTa
+oiAMBChA0dRUAQkylLFkKioipgB1IuqIIEUhCmM6UYmKsIqQRmWCkUpEhe8aFQ0d
+i1TAIARMKxFlTtKxEi7HypqJsaFzkgpFSHTRgETSNEXXIJQk2ZQEg7MNiRtjdspz
+8HAEp1ixZfMaP0TG4/1D/59z147jqMYU00A64QoVSaIAVU1HgsIdBoVQ94Qp5iRw
+nHF11IrHLdAYArxUZxnMm6rXxt9rnIhjx7CLozHmYIdaxbweAknHdm3DruGSmOsm
+wx7BrU96lq2MRH7DIsRKUD5MbqhjTsqyEyAMudJwLY8OZU2SFZWvEGDbkpbDIpan
+UJCqCXx5z7A6jlQwJqpkqlSUEMVMNKEmUiRxq8ibhEghkomgQbCIqEF1pMkGpRIf
+nYkFJBMvcIptSdggLPOYOMqRKSuawG6tw0Djze5NWT5/0BfIzvA+mS84ceqfrxcU
+J/ha25zc09tjWa9271s+9+yh/NmPFlSW95W0dWRsu5Lv7zuxdnSofRjeqFsHVhL7
+Sfpg7lDnjEDkzOaHnSXnZjZ96A5UduzqXfR5dXhJUVl91z4l417p/OUFa9Ibi9yv
+dwtqbsWuxrPX7xkoB6DZ6loxqfNLkfT0ZrJiNPPdt5r6ibPkGz0v74z9yD98asay
+Z73dF0J5PaPs8ap0QebunbOjxoq0PzC3ob1/4P231k1guKXre8VF8Xl6GBcuHJt+
+/sDno/21S48Pjs0pg6UtkU+D+3MunRtY/OJ1jvil+ePPvdcObMwbuTAr2PxgR8XS
+600LRua9XVJ1JOJUTTkUeHONfhIuH7v9CzlKP4A=
+=rqkF
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gimmi
+
+==================================================================
