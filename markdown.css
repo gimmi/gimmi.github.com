@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    padding: 45px;
+}
+
+code {
+    font-family: monospace;
+}
+
+pre {
+    padding: .5em;
+    background-color: #f7f7f7;
+}
+
+blockquote {
+    margin: 0;
+    border-left: .3em solid lightgray;
+    padding-left: 1em;
+}
