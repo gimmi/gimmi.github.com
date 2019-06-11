@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    padding: 45px;
+    margin: 1em;
 }
 
 code {
@@ -16,4 +16,8 @@ blockquote {
     margin: 0;
     border-left: .3em solid lightgray;
     padding-left: 1em;
+}
+
+img {
+    border: 2px solid lightgray;
 }
