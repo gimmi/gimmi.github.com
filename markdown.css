@@ -21,3 +21,13 @@ blockquote {
 img {
     border: 2px solid lightgray;
 }
+
+table {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid lightgray;
+    padding: .2em;
+}
