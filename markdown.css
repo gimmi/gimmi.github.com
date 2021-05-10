@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    margin: 1em;
+    padding: 45px;
 }
 
 code {
@@ -9,25 +9,21 @@ code {
 
 pre {
     padding: .5em;
-    background-color: #f7f7f7;
+    border: 1px solid #808080;
 }
 
 blockquote {
     margin: 0;
-    border-left: .3em solid lightgray;
+    border-left: .3em solid #808080;
     padding-left: 1em;
 }
 
-img {
-    border: 2px solid lightgray;
-}
-
 table {
-    border: 1px solid lightgray;
-    border-collapse: collapse;
+  border: 1px solid #808080;
+  border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid lightgray;
-    padding: .2em;
+  border: 1px solid lightgray;
+  padding: .2em;
 }
