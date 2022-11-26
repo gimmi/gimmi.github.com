@@ -16,10 +16,8 @@
 </head>
 
 <body>
-    <div class="markdown-body container">
-        <div class="page-header">
-            <h1>Gian Marco Gherardi <small>perfectionist with deadlines</small></h1>
-        </div>
+    <div class="markdown-body">
+        <h1>Gian Marco Gherardi</h1>
         <app-contacts-component></app-contacts-component>
     </div>
     <script src="//code.jquery.com/jquery.js"></script>
@@ -41,37 +39,28 @@
     </script>
 
     <script type="text/ng-template" id="app-contacs.component.html">
-        <div class="row">
-            <div class="col-sm-6">
+        <div>
+            <div>
                 <address>
-                    <strong>E-Mail</strong><br>
-                    <a ng-href="mailto:{{$ctrl.email}}">{{$ctrl.email}}</a>
+                    <strong>E-Mail</strong> <a ng-href="mailto:{{$ctrl.email}}">{{$ctrl.email}}</a>
                 </address>
                 <address>
-                    <strong>Mobile</strong><br>
-                    <a ng-href="tel:{{$ctrl.mobile}}">{{$ctrl.mobile}}</a>
+                    <strong>Mobile</strong> <a ng-href="tel:{{$ctrl.mobile}}">{{$ctrl.mobile}}</a>
                 </address>
                 <address>
-                    <strong>Skype</strong><br>
-                    <a ng-href="skype:{{$ctrl.skype}}">Gian Marco Gherardi</a>
+                    <strong>Skype</strong> <a ng-href="skype:{{$ctrl.skype}}">Gian Marco Gherardi</a>
                 </address>
                 <address>
-                    <strong>PEC</strong><br>
-                    <a ng-href="mailto:{{$ctrl.pec}}">{{$ctrl.pec}}</a>
-                </address>
-            </div>
-            <div class="col-sm-6">
-                <address>
-                    <strong>Twitter</strong><br>
-                    <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
+                    <strong>PEC</strong> <a ng-href="mailto:{{$ctrl.pec}}">{{$ctrl.pec}}</a>
                 </address>
                 <address>
-                    <strong>LinkedIn</strong><br>
-                    <a href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
+                    <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
                 </address>
                 <address>
-                    <strong>GitHub</strong><br>
-                    <a rel="me" href="https://github.com/gimmi">gimmi</a>
+                    <strong>LinkedIn</strong> <a href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
+                </address>
+                <address>
+                    <strong>GitHub</strong> <a rel="me" href="https://github.com/gimmi">gimmi</a>
                 </address>
             </div>
         </div>
