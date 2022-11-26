@@ -12,57 +12,56 @@
     <link rel="openid.delegate" href="http://gianmarco.gherardi.me" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css" integrity="sha512-KUoB3bZ1XRBYj1QcH4BHCQjurAZnCO3WdrswyLDtp7BMwCw7dPZngSLqILf68SGgvnWHTD5pPaYrXi6wiRJ65g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+    <script type="module" defer>
+        import Alpine from 'https://unpkg.com/alpinejs@3.10.5?module'; // https://unpkg.com/alpinejs@^3?module
+        
+        console.debug('Alpine', Alpine.version)
+
+        Alpine.data('contacts', () => {
+            const email = atob('Z2lhbm1hcmNvLmdoZXJhcmRpQGdtYWlsLmNvbQ=='),
+                  mobile = atob('KzM5IDMyOCAwMTc0MTM3'),
+                  pec = atob('Z2lhbm1hcmNvLmdoZXJhcmRpQHBlYy5pdA==')
+
+            return {
+                email,
+                emailHref: 'mailto:' + email,
+                skypeHref: `skype:${email}?add`,
+                mobile,
+                mobileHref: 'tel:' + mobile,
+                pec,
+                pecHref: 'mailto:' + pec,
+            }
+        });
+
+        Alpine.start()
+    </script>
 </head>
 
 <body>
-    <div class="markdown-body">
+    <div class="markdown-body" x-data="contacts">
         <h1>Gian Marco Gherardi</h1>
-        <app-contacts-component></app-contacts-component>
+        <address>
+            <strong>E-Mail</strong> <a x-bind:href="emailHref" x-text="email"></a>
+        </address>
+        <address>
+            <strong>Mobile</strong> <a x-bind:href="mobileHref" x-text="mobile"></a>
+        </address>
+        <address>
+            <strong>Skype</strong> <a x-bind:href="skypeHref">Gian Marco Gherardi</a>
+        </address>
+        <address>
+            <strong>PEC</strong> <a x-bind:href="pecHref" x-text="pec"></a>
+        </address>
+        <address>
+            <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
+        </address>
+        <address>
+            <strong>LinkedIn</strong> <a href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
+        </address>
+        <address>
+            <strong>GitHub</strong> <a rel="me" href="https://github.com/gimmi">gimmi</a>
+        </address>
     </div>
-    <script>
-        angular.module('app', [], function ($compileProvider) {
-            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|mailto|tel|skype):/);
-        }).component('appContactsComponent', {
-            templateUrl: 'app-contacs.component.html',
-            controller: function() {
-                var ctrl = this;
-
-                ctrl.email = atob('Z2lhbm1hcmNvLmdoZXJhcmRpQGdtYWlsLmNvbQ==');
-                ctrl.skype = ctrl.email + '?add';
-                ctrl.mobile = atob('KzM5IDMyOCAwMTc0MTM3');
-                ctrl.pec = atob('Z2lhbm1hcmNvLmdoZXJhcmRpQHBlYy5pdA==');
-            }
-        });
-    </script>
-
-    <script type="text/ng-template" id="app-contacs.component.html">
-        <div>
-            <div>
-                <address>
-                    <strong>E-Mail</strong> <a ng-href="mailto:{{$ctrl.email}}">{{$ctrl.email}}</a>
-                </address>
-                <address>
-                    <strong>Mobile</strong> <a ng-href="tel:{{$ctrl.mobile}}">{{$ctrl.mobile}}</a>
-                </address>
-                <address>
-                    <strong>Skype</strong> <a ng-href="skype:{{$ctrl.skype}}">Gian Marco Gherardi</a>
-                </address>
-                <address>
-                    <strong>PEC</strong> <a ng-href="mailto:{{$ctrl.pec}}">{{$ctrl.pec}}</a>
-                </address>
-                <address>
-                    <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
-                </address>
-                <address>
-                    <strong>LinkedIn</strong> <a href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
-                </address>
-                <address>
-                    <strong>GitHub</strong> <a rel="me" href="https://github.com/gimmi">gimmi</a>
-                </address>
-            </div>
-        </div>
-    </script>
 </body>
 
 </html>
