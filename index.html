@@ -10,26 +10,32 @@
     <title>Gian Marco Gherardi</title>
     <link rel="openid.server" href="https://indieauth.com/openid" />
     <link rel="openid.delegate" href="http://gianmarco.gherardi.me" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css" integrity="sha512-KUoB3bZ1XRBYj1QcH4BHCQjurAZnCO3WdrswyLDtp7BMwCw7dPZngSLqILf68SGgvnWHTD5pPaYrXi6wiRJ65g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css"
+        integrity="sha512-KUoB3bZ1XRBYj1QcH4BHCQjurAZnCO3WdrswyLDtp7BMwCw7dPZngSLqILf68SGgvnWHTD5pPaYrXi6wiRJ65g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
     <script type="module" defer>
         import Alpine from 'https://unpkg.com/alpinejs@3.10.5?module'; // https://unpkg.com/alpinejs@^3?module
-        
+
         console.debug('Alpine', Alpine.version)
 
         Alpine.data('contacts', () => {
-            const email = atob('Z2lhbm1hcmNvLmdoZXJhcmRpQGdtYWlsLmNvbQ=='),
-                  mobile = atob('KzM5IDMyOCAwMTc0MTM3'),
-                  pec = atob('Z2lhbm1hcmNvLmdoZXJhcmRpQHBlYy5pdA==')
+            const ret = {
+                email: atob('Z2lhbm1hcmNvLmdoZXJhcmRpQGdtYWlsLmNvbQ=='),
+                mobile: atob('KzM5IDMyOCAwMTc0MTM3'),
+                pec: atob('Z2lhbm1hcmNvLmdoZXJhcmRpQHBlYy5pdA=='),
+            }
 
             return {
-                email,
-                emailHref: 'mailto:' + email,
-                skypeHref: `skype:${email}?add`,
-                mobile,
-                mobileHref: 'tel:' + mobile,
-                pec,
-                pecHref: 'mailto:' + pec,
+                ...ret,
+                emailHref: `mailto:${ret.email}`,
+                skypeHref: `skype:${ret.email}?add`,
+                mobileHref: `tel:${ret.mobile}`,
+                pecHref: `mailto:${ret.pec}`,
             }
         });
 
@@ -40,27 +46,41 @@
 <body>
     <div class="markdown-body" x-data="contacts">
         <h1>Gian Marco Gherardi</h1>
-        <address>
-            <strong>E-Mail</strong> <a x-bind:href="emailHref" x-text="email"></a>
-        </address>
-        <address>
-            <strong>Mobile</strong> <a x-bind:href="mobileHref" x-text="mobile"></a>
-        </address>
-        <address>
-            <strong>Skype</strong> <a x-bind:href="skypeHref">Gian Marco Gherardi</a>
-        </address>
-        <address>
-            <strong>PEC</strong> <a x-bind:href="pecHref" x-text="pec"></a>
-        </address>
-        <address>
-            <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
-        </address>
-        <address>
-            <strong>LinkedIn</strong> <a href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
-        </address>
-        <address>
-            <strong>GitHub</strong> <a rel="me" href="https://github.com/gimmi">gimmi</a>
-        </address>
+        <div style="display: flex; gap: 0 1em; flex-wrap: wrap;">
+            <div>
+                <address>
+                    <i class="fa-regular fa-envelope"></i>
+                    <strong>E-Mail</strong> <a x-bind:href="emailHref" x-text="email"></a>
+                </address>
+                <address>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <strong>Mobile</strong> <a x-bind:href="mobileHref" x-text="mobile"></a>
+                </address>
+                <address>
+                    <i class="fa-brands fa-skype"></i>
+                    <strong>Skype</strong> <a x-bind:href="skypeHref">Gian Marco Gherardi</a>
+                </address>
+                <address>
+                    <i class="fa-solid fa-gavel"></i>
+                    <strong>PEC</strong> <a x-bind:href="pecHref" x-text="pec"></a>
+                </address>
+            </div>
+            <div>
+                <address>
+                    <i class="fa-brands fa-twitter"></i>
+                    <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
+                </address>
+                <address>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <strong>LinkedIn</strong> <a
+                        href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
+                </address>
+                <address>
+                    <i class="fa-brands fa-github"></i>
+                    <strong>GitHub</strong> <a rel="me" href="https://github.com/gimmi">gimmi</a>
+                </address>
+            </div>
+        </div>
     </div>
 </body>
 
