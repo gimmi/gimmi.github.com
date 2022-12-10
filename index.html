@@ -18,27 +18,33 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="index.css">
-    <script type="module" defer>
-        import Alpine from 'https://unpkg.com/alpinejs@3.10.5?module'; // https://unpkg.com/alpinejs@^3?module
-
-        Alpine.data('contacts', () => {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             const ret = {
                 email: atob('Z2lhbm1hcmNvLmdoZXJhcmRpQGdtYWlsLmNvbQ=='),
                 mobile: atob('KzM5IDMyOCAwMTc0MTM3'),
                 pec: atob('Z2lhbm1hcmNvLmdoZXJhcmRpQHBlYy5pdA=='),
+                whatsapp: atob('MzkzMjgwMTc0MTM3'),
             }
 
-            return {
-                ...ret,
-                emailHref: `mailto:${ret.email}`,
-                skypeHref: `skype:${ret.email}?add`,
-                mobileHref: `tel:${ret.mobile}`,
-                pecHref: `mailto:${ret.pec}`,
-                whatsappHref: `https://wa.me/${ret.mobile}`
-            }
-        });
+            let el = document.getElementById('email')
+            el.innerText = ret.email
+            el.href = `mailto:${ret.email}`
 
-        Alpine.start()
+            el = document.getElementById('mobile')
+            el.innerText = ret.mobile
+            el.href = `tel:${ret.mobile}`
+
+            el = document.getElementById('pec')
+            el.innerText = ret.pec
+            el.href = `mailto:${ret.pec}`
+
+            el = document.getElementById('whatsapp')
+            el.href = `https://wa.me/${ret.whatsapp}`
+
+            el = document.getElementById('skype')
+            el.href = `skype:${ret.email}`
+        })
     </script>
 </head>
 
@@ -49,19 +55,19 @@
             <div>
                 <address>
                     <i class="fa-regular fa-envelope"></i>
-                    <strong>E-Mail</strong> <a x-bind:href="emailHref" x-text="email"></a>
+                    <strong>E-Mail</strong> <a id="email"></a>
                 </address>
                 <address>
                     <i class="fa-solid fa-mobile-screen-button"></i>
-                    <strong>Mobile</strong> <a x-bind:href="mobileHref" x-text="mobile"></a>
+                    <strong>Mobile</strong> <a id="mobile"></a>
                 </address>
                 <address>
                     <i class="fa-solid fa-gavel"></i>
-                    <strong>PEC</strong> <a x-bind:href="pecHref" x-text="pec"></a>
+                    <strong>PEC</strong> <a id="pec"></a>
                 </address>
                 <address>
                     <i class="fa-brands fa-whatsapp"></i>
-                    <strong>Whatsapp</strong> <a x-bind:href="whatsappHref">@gimmi</a>
+                    <strong>Whatsapp</strong> <a id="whatsapp">@gimmi</a>
                 </address>
                 <address>
                     <i class="fa-brands fa-telegram"></i>
@@ -71,20 +77,19 @@
             <div>
                 <address>
                     <i class="fa-brands fa-skype"></i>
-                    <strong>Skype</strong> <a x-bind:href="skypeHref">Gian Marco Gherardi</a>
+                    <strong>Skype</strong> <a id="skype">Gian Marco Gherardi</a>
                 </address>
                 <address>
                     <i class="fa-brands fa-twitter"></i>
-                    <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">@gianmarcog</a>
+                    <strong>Twitter</strong> <a href="https://twitter.com/gianmarcog">@gianmarcog</a>
                 </address>
                 <address>
                     <i class="fa-brands fa-linkedin"></i>
-                    <strong>LinkedIn</strong> <a
-                        href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
+                    <strong>LinkedIn</strong> <a href="https://it.linkedin.com/in/gianmarcogherardi">gianmarcogherardi</a>
                 </address>
                 <address>
                     <i class="fa-brands fa-github"></i>
-                    <strong>GitHub</strong> <a rel="me" href="https://github.com/gimmi">gimmi</a>
+                    <strong>GitHub</strong> <a href="https://github.com/gimmi">gimmi</a>
                 </address>
             </div>
         </div>
