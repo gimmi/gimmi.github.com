@@ -21,8 +21,6 @@
     <script type="module" defer>
         import Alpine from 'https://unpkg.com/alpinejs@3.10.5?module'; // https://unpkg.com/alpinejs@^3?module
 
-        console.debug('Alpine', Alpine.version)
-
         Alpine.data('contacts', () => {
             const ret = {
                 email: atob('Z2lhbm1hcmNvLmdoZXJhcmRpQGdtYWlsLmNvbQ=='),
@@ -36,6 +34,7 @@
                 skypeHref: `skype:${ret.email}?add`,
                 mobileHref: `tel:${ret.mobile}`,
                 pecHref: `mailto:${ret.pec}`,
+                whatsappHref: `https://wa.me/${ret.mobile}`
             }
         });
 
@@ -57,18 +56,26 @@
                     <strong>Mobile</strong> <a x-bind:href="mobileHref" x-text="mobile"></a>
                 </address>
                 <address>
-                    <i class="fa-brands fa-skype"></i>
-                    <strong>Skype</strong> <a x-bind:href="skypeHref">Gian Marco Gherardi</a>
-                </address>
-                <address>
                     <i class="fa-solid fa-gavel"></i>
                     <strong>PEC</strong> <a x-bind:href="pecHref" x-text="pec"></a>
+                </address>
+                <address>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <strong>Whatsapp</strong> <a x-bind:href="whatsappHref">@gimmi</a>
+                </address>
+                <address>
+                    <i class="fa-brands fa-telegram"></i>
+                    <strong>Telegram</strong> <a href="https://t.me/gmghr">@gmghr</a>
                 </address>
             </div>
             <div>
                 <address>
+                    <i class="fa-brands fa-skype"></i>
+                    <strong>Skype</strong> <a x-bind:href="skypeHref">Gian Marco Gherardi</a>
+                </address>
+                <address>
                     <i class="fa-brands fa-twitter"></i>
-                    <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">gianmarcog</a>
+                    <strong>Twitter</strong> <a rel="me" href="https://twitter.com/gianmarcog">@gianmarcog</a>
                 </address>
                 <address>
                     <i class="fa-brands fa-linkedin"></i>
